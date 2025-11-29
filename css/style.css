@@ -1,0 +1,132 @@
+/*
+ --------------------------------------------------------------
+  TYPOGRAPHY SYSTEM (Font Sizes in rem, 1rem = 16px)
+ --------------------------------------------------------------
+  0.625 / 0.75 / 0.875 / 1 / 1.03125 / 1.0625 / 1.09375 / 1.125 / 1.25 / 1.5 / 1.875 / 2.25 / 2.75 / 3.25 / 3.875 / 4.625 / 5.375 / 6.125
+
+ --------------------------------------------------------------
+  SPACING SYSTEM (Spacing values in rem, 1rem = 16px)
+ --------------------------------------------------------------
+  0.125 / 0.25 / 0.5 / 0.75 / 1 / 1.5 / 2 / 3 / 4 / 5 / 6 / 8 / 10 / 12 / 14 / 
+   16 / 18 / 20 / 24 / 28 / 32 / 36 / 40 / 48 / 56 / 64 / 72 / 80
+*/
+
+@import url("./variables.css");
+
+/* Self-hosted Rubik Sans Serif font */
+/* rubik-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/rubik-v28-latin-300.woff2") format("woff2");
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/rubik-v28-latin-regular.woff2") format("woff2");
+}
+
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/rubik-v28-latin-500.woff2") format("woff2");
+}
+
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/rubik-v28-latin-600.woff2") format("woff2");
+}
+
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/rubik-v28-latin-700.woff2") format("woff2");
+}
+
+/* rubik-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/rubik-v28-latin-800.woff2") format("woff2");
+}
+
+/* rubik-900 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/rubik-v28-latin-900.woff2") format("woff2");
+}
+
+/* Default styling reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Inherits font to avoid browser default */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}

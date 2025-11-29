@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-1" y="27" width="11" height="14" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="greenagri-favicon-16x16" transform="translate(-940 -1369)">
+    <rect id="Rectangle" width="16" height="16" rx="1" transform="translate(940 1369)" fill="#2f7a3e"/>
+    <g id="Scroll_Group" data-name="Scroll Group" transform="translate(943.5 1343)" clip-path="url(#clip-path)" style="isolation: isolate">
+      <text id="g" transform="translate(0 36)" fill="#060f08" font-size="26" font-family="Dongle-Regular, Dongle" letter-spacing="-0.01em"><tspan x="0" y="0">g</tspan></text>
+    </g>
+  </g>
+</svg>

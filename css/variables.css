@@ -1,0 +1,47 @@
+:root {
+  /* Brand Colors */
+  --ga-primary: #2f7a3e;
+  --ga-primary-50: #fcfefc;
+  --ga-primary-700: #245f31;
+  --ga-primary-900: #060f08;
+  --ga-accent: #f18d2d;
+  --ga-accent-700: #d36f13;
+  --ga-fresh: #8cc63f;
+  --ga-neutral-bg: #f7f5ee;
+  --ga-ink: #0b2b23;
+
+  /* Typography */
+  --ga-font-primary: "Inter", sans-serif;
+  --ga-font-heading: "Playfair Display", serif;
+
+  /* Font weights */
+  --ga-font-weight-normal: 400;
+  --ga-font-weight-medium: 500;
+  --ga-font-weight-bold: 700;
+
+  /* Font sizes */
+  --ga-text-xs: 0.75rem;
+  --ga-text-sm: 0.875rem;
+  --ga-text-base: 1rem;
+  --ga-text-lg: 1.125rem;
+  --ga-text-xl: 1.25rem;
+  --ga-text-2xl: 1.5rem;
+  --ga-text-3xl: 2.25rem;
+
+  /* Spacing */
+  --ga-space-xs: 0.5rem;
+  --ga-space-sm: 1rem;
+  --ga-space-md: 2rem;
+  --ga-space-lg: 4rem;
+
+  /* Layout dimensions */
+  --container-width: 80rem; /* 1280px */
+  --navigation-height: 4rem; /* 64px */
+
+  /* Transitions */
+  --ga-transition: 0.3s ease;
+
+  /* Other */
+  --ga-border-radius: 0.5rem;
+  --ga-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

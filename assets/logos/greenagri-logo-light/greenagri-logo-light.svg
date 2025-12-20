@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="820" height="208" viewBox="0 0 820 208">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-16" y="102" width="820" height="208" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="greenagri-logo-light" transform="translate(-869)">
+    <g id="Group">
+      <circle id="Ellipse" cx="38" cy="38" r="38" transform="translate(1466 68)" fill="#6da278"/>
+      <circle id="Ellipse-2" data-name="Ellipse" cx="38" cy="38" r="38" transform="translate(896 68)" fill="#6da278"/>
+    </g>
+    <g id="Scroll_Group" data-name="Scroll Group" transform="translate(885 -102)" clip-path="url(#clip-path)" style="isolation: isolate">
+      <text id="greenagri" transform="translate(0 250)" fill="#fcfefc" font-size="294" font-family="Dongle-Regular, Dongle" letter-spacing="-0.01em"><tspan x="0" y="0">greenagri</tspan></text>
+    </g>
+  </g>
+</svg>

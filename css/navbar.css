@@ -1,0 +1,441 @@
+/*
+===========================
+  SITE NAVIGATION STYLES
+===========================
+*/
+
+/* Base Navigation Container */
+.site-nav {
+  background-color: var(--ga-primary-50);
+  box-shadow: var(--ga-site-nav-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-nav-container {
+  max-width: var(--ga-container-width);
+  height: var(--ga-navigation-height);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.site-nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav-logo img {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* Navigation Links Container */
+.site-nav-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.site-nav-item {
+  position: relative;
+}
+
+/* Navigation Link Styles */
+.site-nav-link {
+  color: var(--ga-primary-900);
+  font-weight: var(--ga-font-weight-medium);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all var(--ga-transition);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: var(--ga-text-base);
+}
+
+.site-nav-link:hover {
+  color: var(--ga-primary);
+}
+
+/*
+============================================
+   MEGA MENU STYLES
+============================================
+*/
+
+.site-nav-mega-menu {
+  position: fixed;
+  top: var(--ga-navigation-height);
+  left: 0;
+  right: 0;
+  background-color: var(--ga-primary-50);
+  box-shadow: var(--ga-site-nav-mega-menu-shadow);
+  padding: 1.875rem;
+  display: none;
+  transform: translateY(-0.625rem);
+  transition: all var(--ga-transition);
+}
+
+/* Show mega menu when parent has is-open class */
+.site-nav-item.is-open .site-nav-mega-menu {
+  display: block;
+  transform: translateY(0);
+}
+
+.site-nav-mega-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.875rem;
+  max-width: var(--ga-container-width);
+  margin: 0 auto;
+}
+
+.site-nav-mega-column {
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  transition: all var(--ga-transition);
+}
+
+.site-nav-mega-column:hover {
+  background-color: var(--ga-neutral-bg);
+}
+
+.site-nav-mega-column h3 {
+  color: var(--ga-primary-900);
+  font-size: var(--ga-text-base);
+  margin-bottom: 0.625rem;
+  font-weight: var(--ga-font-weight-semibold);
+}
+
+.site-nav-mega-column p {
+  font-size: var(--ga-text-sm);
+  color: var(--ga-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.site-nav-mega-column p.cta-paragraph {
+  margin-bottom: 0;
+}
+
+.site-nav-mega-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.site-nav-mega-column a {
+  color: var(--ga-mega-menu-link);
+  font-size: var(--ga-text-sm-plus);
+  padding: 0.375rem 0;
+  transition: all var(--ga-transition);
+}
+
+.site-nav-mega-column a:hover {
+  color: var(--ga-primary);
+}
+
+/*
+============================================
+   DROPDOWN MENU STYLES
+============================================
+*/
+
+.site-nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--ga-primary-50);
+  box-shadow: var(--ga-site-nav-mega-menu-shadow);
+  border-radius: var(--ga-border-radius);
+  padding: 0.5rem;
+  min-width: 15rem;
+  margin-top: 0.875rem;
+  display: none;
+  transform: translateY(-0.625rem);
+  transition: all var(--ga-transition);
+}
+
+/* Show dropdown menu when parent has is-open class */
+.site-nav-item.is-open .site-nav-dropdown-menu {
+  display: block;
+  transform: translateY(0);
+}
+
+/* Updated: Add flexbox for icon alignment */
+.site-nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  color: var(--ga-mega-menu-link);
+  font-size: var(--ga-text-sm-plus);
+  transition: all var(--ga-transition);
+}
+
+/* NEW: Style the certification icons */
+.site-nav-dropdown-menu a i {
+  color: var(--ga-primary);
+  font-size: 1rem;
+  width: 1.25rem;
+  text-align: center;
+  transition: all var(--ga-transition);
+  flex-shrink: 0;
+}
+
+.site-nav-dropdown-menu a:hover {
+  color: var(--ga-primary);
+  background-color: var(--ga-neutral-bg);
+  border-radius: var(--ga-border-radius);
+  padding-left: 1.25rem;
+}
+
+/*
+============================================
+  STYLES FOR ARROW ICONS
+============================================
+*/
+
+/* Dropdown Toggle Arrow */
+.site-nav-dropdown-arrow {
+  display: inline-block;
+  transition: transform var(--ga-arrow-rotation-duration)
+    var(--ga-arrow-rotation-timing);
+  font-size: 0.875rem;
+  color: currentColor;
+  transform: translateY(0.1875rem);
+  vertical-align: middle;
+}
+
+/* Rotate arrow when menu is open */
+.site-nav-item.is-open .site-nav-dropdown-arrow {
+  transform: translateY(0.06rem) rotate(180deg);
+}
+
+/*
+=================================================
+  STYLES FOR MARKETS MEGA MENU – 2-COLUMN LAYOUT
+=================================================
+*/
+.site-nav-item:nth-child(3) .site-nav-mega-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.site-nav-mega-column strong {
+  display: block;
+  font-weight: var(--ga-font-weight-semibold);
+}
+
+.site-nav-mega-column span {
+  display: block;
+  font-size: var(--ga-text-sm);
+  color: var(--ga-text-secondary);
+  margin: 0.25rem 0;
+}
+
+/*
+=============================
+  CTA COLUMN SPECIAL STYLING
+=============================
+*/
+.site-nav-mega-cta {
+  background: linear-gradient(135deg, #e8f3eb 0%, #f0f8f3 100%);
+}
+
+/*
+=========================
+  STYLES FOR CTA BUTTONS
+=========================
+*/
+a.site-nav-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--ga-cta-bg);
+  color: var(--ga-primary-900);
+
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
+  font-size: var(--ga-text-sm-plus);
+  font-weight: var(--ga-font-weight-semibold);
+  margin-top: 0.75rem;
+  transition: all var(--ga-transition);
+}
+
+a.site-nav-cta-button:hover {
+  background-color: var(--ga-cta-bg-hover);
+  color: var(--ga-primary-900);
+  padding: 0.75rem 1.25rem;
+}
+
+/*
+=========================
+  PARTNER BUTTON STYLES
+=========================
+*/
+a.site-nav-partner-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--ga-cta-bg);
+  color: var(--ga-primary-900);
+
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
+  font-size: var(--ga-text-sm-plus);
+  font-weight: var(--ga-font-weight-semibold);
+  transition: all var(--ga-transition);
+}
+
+a.site-nav-partner-button:hover {
+  background-color: var(--ga-cta-bg-hover);
+  color: var(--ga-primary-900);
+  padding: 0.75rem 1.25rem;
+}
+
+/*
+========================
+  MOBILE TOGGLE BUTTON
+========================
+*/
+.site-nav-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.site-nav-toggle .line {
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: var(--ga-primary-900);
+  display: block;
+  margin: 0.375rem auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.site-nav-toggle.is-active .line:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.site-nav-toggle.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.site-nav-toggle.is-active .line:nth-child(3) {
+  transform: translateY(-10px) rotate(45deg);
+}
+
+/*
+==========================
+  RESPONSIVE DESIGN STYLES
+==========================
+*/
+
+/* RESPONSIVE NAVIGATION - MOBILE */
+/* Breakpoint: 1100px (68.75rem) */
+
+@media (max-width: 68.75rem) {
+  .site-nav-links {
+    position: fixed;
+    top: var(--ga-navigation-height);
+    left: 0;
+    right: 0;
+    background-color: var(--ga-primary-50);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: var(--ga-site-nav-mega-menu-shadow);
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .site-nav-links.is-active {
+    display: block;
+    max-height: calc(100vh - var(--ga-navigation-height));
+    overflow-y: auto;
+  }
+
+  .site-nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(47, 122, 62, 0.1);
+  }
+
+  .site-nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .site-nav-link {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+
+  .site-nav-partner-button {
+    width: calc(100% - 2.5rem);
+    margin: 1rem 1.25rem;
+    text-align: center;
+  }
+
+  .site-nav-toggle {
+    display: block;
+  }
+
+  .site-nav-mega-menu,
+  .site-nav-dropdown-menu {
+    position: static;
+    display: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .site-nav-item.is-open .site-nav-mega-menu,
+  .site-nav-item.is-open .site-nav-dropdown-menu {
+    position: static;
+    display: block;
+    padding: 0.5rem 0;
+    transform: none;
+  }
+
+  .site-nav-mega-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  .site-nav-mega-column {
+    padding: 1rem 1.25rem;
+    border-radius: 0;
+  }
+
+  .site-nav-mega-column:hover {
+    background-color: var(--ga-neutral-bg);
+  }
+
+  .site-nav-dropdown-menu {
+    border-radius: 0;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .site-nav-dropdown-menu a {
+    padding: 0.75rem 2rem;
+  }
+
+  .site-nav-dropdown-menu a:hover {
+    padding-left: 2.25rem;
+  }
+  .site-nav-item:nth-child(3) .site-nav-mega-columns {
+    grid-template-columns: 1fr;
+  }
+}

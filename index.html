@@ -77,11 +77,292 @@
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="assets/favicons/manifest.webmanifest" />
+
+    <!-- Font Awesome for dropdown arrows -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <h1 style="font-family: 'Rubik', sans-serif">Your Heading</h1>
+    <nav class="site-nav">
+      <div class="site-nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="site-nav-logo">
+          <img
+            src="assets/logos/greenagri-logo-dark/greenagri-logo-dark.svg"
+            alt="GREENAGRI"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="site-nav-links" id="siteNavLinks">
+          <!-- About - Normal Link -->
+          <li class="site-nav-item">
+            <a href="#about" class="site-nav-link">About</a>
+          </li>
+
+          <!-- Products - Mega Menu -->
+          <li class="site-nav-item">
+            <a href="#products" class="site-nav-link site-nav-dropdown-toggle"
+              >Products</a
+            >
+            <div class="site-nav-mega-menu">
+              <div class="site-nav-mega-columns">
+                <!-- Column 1: Citrus Fruits -->
+                <div class="site-nav-mega-column">
+                  <h3>Citrus Fruits</h3>
+                  <p>
+                    Premium citrus from our Souss-Massa groves with exceptional
+                    sweetness
+                  </p>
+                  <ul>
+                    <li>
+                      <a href="#oranges">Oranges (Navel & Valencia)</a>
+                    </li>
+                    <li>
+                      <a href="#mandarins"
+                        >Mandarins (Clementines & Nadorcott)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#lemons">Lemons (Eureka)</a>
+                    </li>
+                    <li>
+                      <a href="#limes">Limes (Persian)</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 2: Tomatoes -->
+                <div class="site-nav-mega-column">
+                  <h3>Tomatoes</h3>
+                  <p>
+                    Year-round greenhouse cultivation ensuring consistent flavor
+                    and firmness
+                  </p>
+                  <ul>
+                    <li>
+                      <a href="#cherry">Cherry Tomatoes</a>
+                    </li>
+                    <li>
+                      <a href="#grape">Grape Tomatoes</a>
+                    </li>
+                    <li>
+                      <a href="#cocktail">Cocktail Tomatoes</a>
+                    </li>
+                    <li>
+                      <a href="#beefsteak">Beefsteak Tomatoes</a>
+                    </li>
+                    <li>
+                      <a href="#plum">Plum Tomatoes (Roma)</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 3: Berries -->
+                <div class="site-nav-mega-column">
+                  <h3>Berries</h3>
+                  <p>
+                    Fresh, hand-picked berries from our elevated substrate
+                    systems
+                  </p>
+                  <ul>
+                    <li>
+                      <a href="#strawberries">Strawberries</a>
+                    </li>
+                    <li>
+                      <a href="#raspberries">Raspberries</a>
+                    </li>
+                    <li>
+                      <a href="#blueberries">Blueberries</a>
+                    </li>
+                    <li>
+                      <a href="#blackberries">Blackberries</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 4: CTA -->
+                <div class="site-nav-mega-column site-nav-mega-cta">
+                  <h3>All Products</h3>
+                  <p class="cta-paragraph">
+                    Explore our complete catalog of certified organic produce,
+                    sourced fresh from local farms and available for bulk
+                    distribution.
+                  </p>
+                  <a href="#products" class="site-nav-cta-button"
+                    >Explore Our Full Catalog</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Markets - Mega Menu -->
+          <li class="site-nav-item">
+            <a href="#markets" class="site-nav-link site-nav-dropdown-toggle"
+              >Markets</a
+            >
+            <div class="site-nav-mega-menu">
+              <div class="site-nav-mega-columns">
+                <!-- Column 1: Europe -->
+                <div class="site-nav-mega-column">
+                  <h3>Europe</h3>
+                  <ul>
+                    <li>
+                      <a href="#france">
+                        <strong>France</strong>
+                        <span
+                          >Anchor market; large volumes of citrus &
+                          tomatoes</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#uk">
+                        <strong>United Kingdom</strong>
+                        <span
+                          >Premium demand for berries & specialty tomatoes</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#germany">
+                        <strong>Germany</strong>
+                        <span
+                          >Strong demand for organic citrus & year-round
+                          tomatoes</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#russia">
+                        <strong>Russia</strong>
+                        <span
+                          >Winter-season demand for citrus & tomatoes;
+                          logistics-focused partnerships
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/markets/europe" class="site-nav-cta-button"
+                    >Explore Europe Markets</a
+                  >
+                </div>
+
+                <!-- Column 2: Africa -->
+                <div class="site-nav-mega-column">
+                  <h3>Africa</h3>
+                  <ul>
+                    <li>
+                      <a href="#senegal">
+                        <strong>Senegal</strong>
+                        <span
+                          >Gateway to West Africa; urban demand for tomatoes &
+                          citrus</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#ivory">
+                        <strong>Ivory Coast</strong>
+                        <span
+                          >Abidjan distribution hub; retailers buy tomatoes,
+                          citrus, seasonal berries</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#gabon">
+                        <strong>Gabon</strong>
+                        <span
+                          >High-margin market for organic and exotic berries;
+                          premium retail buyers</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#mauritania">
+                        <strong>Mauritania</strong>
+                        <span
+                          >Import-reliant market for mandarins and oranges;
+                          niche but consistent demand</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/markets/africa" class="site-nav-cta-button"
+                    >Explore Africa Markets</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Certifications - Dropdown Menu -->
+          <li class="site-nav-item">
+            <a
+              href="#certifications"
+              class="site-nav-link site-nav-dropdown-toggle"
+              >Certifications</a
+            >
+            <div class="site-nav-dropdown-menu">
+              <a href="#globalgap"
+                ><i class="fas fa-certificate"></i>GlobalGAP Certified</a
+              >
+              <a href="#eu-organic"
+                ><i class="fas fa-leaf"></i>EU Organic Certified</a
+              >
+              <a href="#morocco-label"
+                ><i class="fas fa-award"></i>Morocco Green Label</a
+              >
+              <a href="#iso-22000"
+                ><i class="fas fa-shield-alt"></i>ISO 22000 Food Safety</a
+              >
+            </div>
+          </li>
+
+          <!-- News - Normal Link -->
+          <li class="site-nav-item">
+            <a href="#news" class="site-nav-link">News</a>
+          </li>
+
+          <!-- Contact - Normal Link -->
+          <li class="site-nav-item">
+            <a href="#contact" class="site-nav-link">Contact</a>
+          </li>
+
+          <!-- CTA Button -->
+          <li class="site-nav-item">
+            <a href="#partner" class="site-nav-partner-button"
+              >Partner With Us</a
+            >
+          </li>
+        </ul>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          type="button"
+          class="site-nav-toggle"
+          id="siteNavToggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <script src="js/navbar.js"></script>
   </body>
 </html>

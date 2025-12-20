@@ -88,14 +88,26 @@
   list-style-type: none;
 }
 
-html {
-  line-height: 1.15;
-}
-
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: var(--ga-font-primary);
+  line-height: 1.6; /* body text readability */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2; /* tighter for headings */
+  font-family: var(--ga-font-heading);
+}
+
+button,
+a {
+  line-height: 1; /* compact for interactive elements */
 }
 
 img,
@@ -125,8 +137,13 @@ textarea {
   font-family: inherit;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .container {
-  max-width: var(--container-width);
+  max-width: var(--ga-container-width);
   margin: 0 auto;
   padding: 0 1rem;
 }

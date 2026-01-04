@@ -11,8 +11,6 @@
    16 / 18 / 20 / 24 / 28 / 32 / 36 / 40 / 48 / 56 / 64 / 72 / 80
 */
 
-@import url("./variables.css");
-
 /* Self-hosted Rubik Sans Serif font */
 /* rubik-300 - latin */
 @font-face {
@@ -93,6 +91,7 @@ body {
   font-size: 100%;
   font-family: var(--ga-font-primary);
   line-height: 1.6; /* body text readability */
+  overflow-x: hidden;
 }
 
 h1,

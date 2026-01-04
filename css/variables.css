@@ -1,7 +1,10 @@
 :root {
   /* Brand Colors */
   --ga-primary: #2f7a3e;
+  --ga-primary-20: rgba(47, 122, 62, 0.2); /* 20% opacity */
+  --ga-primary-50: rgba(47, 122, 62, 0.5); /* 50% opacity */
   --ga-primary-50: #fcfefc;
+  --ga-primary-tint: #f0f9f2;
   --ga-primary-700: #245f31;
   --ga-primary-900: #060f08;
   --ga-accent: #f18d2d;
@@ -11,6 +14,8 @@
   --ga-ink: #0b2b23;
   --ga-text-secondary: #333333;
   --ga-mega-menu-link: #444444;
+  --ga-text-muted: #858585;
+  --ga-text-light: #707070;
   --ga-cta-bg: #7bcc8c;
   --ga-cta-bg-hover: #5dc073;
 
@@ -52,10 +57,11 @@
   --ga-arrow-rotation-duration: 0.3s;
   --ga-arrow-rotation-timing: ease;
 
-  /* Other */
   --ga-border-radius: 0.5rem;
   --ga-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --ga-site-nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   /* --ga-site-nav-mega-menu-shadow: 0 10px 40px rgba(0, 0, 0, 0.12); */
-  --ga-site-nav-mega-menu-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  /* --ga-site-nav-mega-menu-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); */
+  --ga-site-nav-mega-menu-shadow: 0 16px 32px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.08);
 }

@@ -6,11 +6,25 @@
 
 /* Base Navigation Container */
 .site-nav {
-  background-color: var(--ga-primary-50);
-  box-shadow: var(--ga-site-nav-shadow);
+  background-color: var(--ga-primary-tint);
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* Navbar styling when user scrolls past hero section */
+.site-nav--scrolled {
+  background-color: var(--ga-primary-50);
+  box-shadow: var(--ga-site-nav-shadow);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* Navbar styling when mega menu, dropdown, or mobile nav bar is open while in hero section */
+.site-nav--menu-open {
+  background-color: var(--ga-primary-50);
 }
 
 .site-nav-container {
@@ -310,17 +324,17 @@ a.site-nav-partner-button:hover {
 }
 
 .site-nav-toggle .line {
-  width: 2.5rem;
-  height: 0.25rem;
-  border-radius: 1rem;
+  width: 28px;
+  height: 3px;
+  border-radius: 16px;
   background-color: var(--ga-primary-900);
   display: block;
-  margin: 0.375rem auto;
+  margin: 5px auto;
   transition: all 0.3s ease-in-out;
 }
 
 .site-nav-toggle.is-active .line:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
+  transform: translateY(8.25px) rotate(-45deg);
 }
 
 .site-nav-toggle.is-active .line:nth-child(2) {
@@ -328,7 +342,7 @@ a.site-nav-partner-button:hover {
 }
 
 .site-nav-toggle.is-active .line:nth-child(3) {
-  transform: translateY(-10px) rotate(45deg);
+  transform: translateY(-8.25px) rotate(45deg);
 }
 
 /*
@@ -339,7 +353,6 @@ a.site-nav-partner-button:hover {
 
 /* RESPONSIVE NAVIGATION - MOBILE */
 /* Breakpoint: 1100px (68.75rem) */
-
 @media (max-width: 68.75rem) {
   .site-nav-links {
     position: fixed;
@@ -437,5 +450,21 @@ a.site-nav-partner-button:hover {
   }
   .site-nav-item:nth-child(3) .site-nav-mega-columns {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Breakpoint: 800px (50rem) */
+@media (max-width: 50rem) {
+  .site-nav-logo img {
+    height: 2.2rem;
+    width: auto;
+  }
+}
+
+/* Breakpoint: 480px (30rem) */
+@media (max-width: 30rem) {
+  .site-nav-logo img {
+    height: 2rem;
+    width: auto;
   }
 }

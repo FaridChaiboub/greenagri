@@ -1,0 +1,289 @@
+/*
+===========================
+  SITE HERO STYLES
+===========================
+*/
+
+.site-hero {
+  background-color: var(--ga-primary-tint);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-hero-container {
+  max-width: var(--ga-container-width);
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.site-hero-slides-wrapper {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.site-hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.site-hero-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.site-hero-slide.exiting {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.site-hero-slide-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.site-hero-slide-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: var(--ga-primary-900);
+  font-weight: 700;
+}
+
+.site-hero-slide-content p {
+  font-size: 1.2rem;
+  color: var(--ga-text-light);
+  line-height: 1.4;
+}
+
+.site-hero-slide-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.site-hero-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.site-hero-btn-primary {
+  background-color: var(--ga-cta-bg);
+  color: var(--ga-primary-900);
+}
+
+.site-hero-btn-primary:hover {
+  background-color: var(--ga-cta-bg-hover);
+}
+
+.site-hero-btn-secondary {
+  background-color: transparent;
+  color: var(--ga-cta-bg-hover);
+  border: 2px solid var(--ga-cta-bg-hover);
+}
+
+.site-hero-btn-secondary:hover {
+  background-color: var(--ga-cta-bg-hover);
+  color: var(--ga-primary-900);
+}
+
+.site-hero-slide-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 0.8s ease-out;
+  overflow: hidden;
+  border-radius: 1.25rem;
+}
+
+.site-hero-slide-image img {
+  width: 100%;
+  height: 31.25rem;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease;
+}
+
+.site-hero-slide:nth-child(2) .site-hero-slide-image img,
+.site-hero-slide:nth-child(3) .site-hero-slide-image img {
+  object-position: right center;
+}
+
+.site-hero-slide-image img:hover {
+  transform: scale(1.05);
+}
+
+.site-hero-progress-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.site-hero-progress-item {
+  flex: 1;
+  max-width: 12.5rem;
+  height: 0.25rem;
+  background-color: var(--ga-primary-20);
+  border-radius: 0.25rem;
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.site-hero-progress-fill {
+  height: 100%;
+  background-color: var(--ga-primary);
+  width: 0%;
+  transition: width 0.1s linear;
+  border-radius: 0.25rem;
+}
+
+.site-hero-progress-item.active .site-hero-progress-fill {
+  animation: progressAnimation 5s linear;
+}
+
+.site-hero-progress-tooltip {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ga-ink);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.site-hero-progress-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.375rem solid transparent;
+  border-top-color: var(--ga-ink);
+}
+
+.site-hero-progress-item:hover .site-hero-progress-tooltip {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.875rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(3.125rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*
+==========================
+  RESPONSIVE DESIGN STYLES
+==========================
+*/
+
+/* Breakpoint: 1100px (68.75rem) */
+@media (max-width: 68.75rem) {
+  .site-hero-container {
+    padding-top: 3rem;
+  }
+
+  .site-hero-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .site-hero-slide-content {
+    display: contents;
+  }
+
+  .site-hero-slide-content h1 {
+    order: 1;
+    font-size: 1.875rem;
+  }
+
+  .site-hero-slide-image {
+    order: 2;
+    width: 100%;
+  }
+
+  .site-hero-slide-content p {
+    order: 3;
+    font-size: 1rem;
+  }
+
+  .site-hero-slide-actions {
+    order: 4;
+  }
+
+  .site-hero-slide-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Breakpoint: 560px (35rem) */
+@media (max-width: 35rem) {
+  .site-hero-slide-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .site-hero-progress-bar {
+    gap: 0.5rem;
+  }
+}
